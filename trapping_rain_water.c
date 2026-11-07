@@ -1,4 +1,6 @@
+//Problem statement:
 
+//Given an array representing the heights of elevation bars, calculate how much rainwater can be trapped between the bars after rainfall.
 #include <stdio.h>
 
 int trap(int height[], int n) {
