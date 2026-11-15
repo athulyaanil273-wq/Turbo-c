@@ -1,4 +1,4 @@
-
+// PROBLEM STATEMENT : Given an array of integers and a number K, find the maximum sum of any contiguous subarray of exactly K elements.
 #include <stdio.h>
 #include <limits.h>
 
