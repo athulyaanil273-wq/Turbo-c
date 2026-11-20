@@ -1,3 +1,8 @@
+//Problem: Given a weighted graph and a source vertex, find the shortest distance from the source to every other vertex.
+//- Graph: Undirected and weighted.
+//- Vertices: 0-indexed.
+//- Edge weights: Non-negative.
+//- Approach: Greedy algorithm.
 
 #include <stdio.h>
 #include <limits.h>
