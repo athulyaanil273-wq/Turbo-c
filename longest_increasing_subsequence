@@ -1,0 +1,39 @@
+//Problem: Given an array of integers, find the length of the longest subsequence in which elements appear in increasing order. The elements don't need to be adjacent.
+#include <stdio.h>
+
+#define MAX 1000
+
+int main() {
+    int n, arr[MAX], dp[MAX];
+    int maxLength = 1;
+
+    printf("Enter array size: ");
+    scanf("%d", &n);
+
+    if (n < 1 || n > MAX) {
+        printf("Invalid array size.\n");
+        return 1;
+    }
+
+    printf("Enter array elements:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        dp[i] = 1;
+    }
+
+    for (int i = 1; i < n; i++) {
+        for (int j = 0; j < i; j++) {
+            if (arr[j] < arr[i] && dp[j] + 1 > dp[i]) {
+                dp[i] = dp[j] + 1;
+            }
+        }
+
+        if (dp[i] > maxLength)
+            maxLength = dp[i];
+    }
+
+    printf("Length of Longest Increasing Subsequence: %d\n",
+           maxLength);
+
+    return 0;
+}
